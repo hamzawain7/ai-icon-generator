@@ -21,8 +21,8 @@
 
 .input {
   width: 100%;
-  padding: 0.7rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
   font-family: var(--font-body);
   font-weight: 400;
   background: var(--bg-secondary);
