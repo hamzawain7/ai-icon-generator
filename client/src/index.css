@@ -47,13 +47,13 @@
   --font-body: 'Outfit', -apple-system, sans-serif;
   --font-serif: 'Crimson Pro', Georgia, serif;
   
-  /* Spacing scale */
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1.25rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4.5rem;
+  /* Spacing scale - compact for single viewport */
+  --space-xs: 0.35rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
 }
 
 /* Reset */

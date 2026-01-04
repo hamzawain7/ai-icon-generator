@@ -1,8 +1,8 @@
 .button {
   width: 100%;
-  padding: 1.1rem 2rem;
+  padding: 0.85rem 1.5rem;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent-primary) 0%, #ff9068 100%);
   border: none;
@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   overflow: hidden;
   letter-spacing: -0.01em;
@@ -34,14 +34,12 @@
 }
 
 .button:hover:not(:disabled) {
-  transform: translateY(-3px);
-  box-shadow: 
-    0 10px 40px rgba(255, 118, 87, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 118, 87, 0.35);
 }
 
 .button:active:not(:disabled) {
-  transform: translateY(-1px);
+  transform: translateY(0);
 }
 
 .button:disabled {
@@ -55,18 +53,18 @@
 }
 
 .arrow {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
 }
 
 .button:hover:not(:disabled) .arrow {
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 .loader {
   position: absolute;
   display: flex;
-  gap: 6px;
+  gap: 5px;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -76,8 +74,8 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: white;
   border-radius: 50%;
   animation: bounce 1.4s infinite ease-in-out both;

@@ -1,5 +1,5 @@
 .container {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .label {
@@ -7,22 +7,22 @@
   align-items: center;
   gap: var(--space-xs);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   letter-spacing: -0.01em;
 }
 
 .icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.8;
 }
 
 .input {
   width: 100%;
-  padding: 1rem 1.25rem;
-  font-size: 1.05rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
   font-family: var(--font-body);
   font-weight: 400;
   background: var(--bg-secondary);
@@ -30,13 +30,12 @@
   border-radius: var(--radius-md);
   color: var(--text-primary);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  letter-spacing: -0.01em;
 }
 
 .input:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 4px rgba(255, 118, 87, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 118, 87, 0.12);
   background: var(--bg-primary);
 }
 
@@ -51,9 +50,5 @@
 }
 
 .hint {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: var(--space-xs);
-  font-weight: 400;
+  display: none;
 }
