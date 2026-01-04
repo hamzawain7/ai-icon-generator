@@ -36,6 +36,7 @@ export function PromptInput({ value, onChange, onSubmit, disabled }: PromptInput
         placeholder="e.g., Toys, Food, Travel, Technology..."
         disabled={disabled}
         autoComplete="off"
+        autoFocus
       />
     </div>
   );
