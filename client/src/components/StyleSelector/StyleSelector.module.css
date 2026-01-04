@@ -1,43 +1,46 @@
 .container {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-lg);
 }
 
 .label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-xs);
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
 }
 
 .icon {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
+  gap: var(--space-sm);
 }
 
 .card {
   position: relative;
-  padding: 0.6rem 0.5rem;
+  padding: 1rem 0.75rem;
   background: var(--bg-secondary);
   border: 2px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   text-align: center;
 }
 
 .card:hover:not([data-disabled="true"]) {
   background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .card:focus {
@@ -47,35 +50,51 @@
 
 .card.selected {
   border-color: var(--accent-primary);
-  background: rgba(255, 107, 74, 0.08);
-  box-shadow: var(--shadow-glow);
+  background: rgba(255, 118, 87, 0.1);
+  box-shadow: 0 0 0 4px rgba(255, 118, 87, 0.1);
+}
+
+.card.selected .cardIcon {
+  transform: scale(1.1);
 }
 
 .card[data-disabled="true"] {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .cardIcon {
-  font-size: 1.2rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xs);
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .cardName {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--text-primary);
   display: block;
+  letter-spacing: -0.01em;
 }
 
 .cardDesc {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card {
+    padding: 0.875rem 0.5rem;
   }
 }

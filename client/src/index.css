@@ -1,47 +1,59 @@
 /* ============================================
    Icon Forge - Global Styles
+   A refined, spacious dark theme
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;500;600&display=swap');
 
 :root {
-  /* Dark theme with warm accents */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --bg-card: #1a1a24;
-  --bg-card-hover: #22222e;
+  /* Deep dark theme with rich undertones */
+  --bg-primary: #08080c;
+  --bg-secondary: #101018;
+  --bg-card: rgba(24, 24, 36, 0.8);
+  --bg-card-hover: rgba(32, 32, 48, 0.9);
   
-  /* Accent colors - warm coral and gold */
-  --accent-primary: #ff6b4a;
-  --accent-secondary: #ffc857;
-  --accent-tertiary: #7b68ee;
+  /* Accent colors - electric coral meets soft amber */
+  --accent-primary: #ff7657;
+  --accent-secondary: #ffb347;
+  --accent-tertiary: #a78bfa;
+  --accent-glow: rgba(255, 118, 87, 0.4);
   
-  /* Text colors */
-  --text-primary: #f5f5f7;
-  --text-secondary: #a1a1aa;
-  --text-muted: #6b6b76;
+  /* Text colors with better contrast */
+  --text-primary: #fafafa;
+  --text-secondary: #b8b8c4;
+  --text-muted: #6e6e7a;
   
   /* Functional colors */
-  --success: #22c55e;
-  --error: #ef4444;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(255, 107, 74, 0.5);
+  --success: #34d399;
+  --error: #f87171;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --border-active: rgba(255, 118, 87, 0.5);
   
   /* Effects */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(255, 107, 74, 0.15);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 60px var(--accent-glow);
   
-  /* Border radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  /* Border radius - slightly softer */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   
-  /* Typography */
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  /* Typography - elegant combination */
+  --font-display: 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+  --font-serif: 'Crimson Pro', Georgia, serif;
+  
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
 }
 
 /* Reset */
@@ -57,21 +69,35 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-body);
+  font-weight: 400;
   background: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 1000;
 }
 
 /* Focus styles */
 :focus-visible {
   outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 /* Selection */
@@ -80,10 +106,10 @@ body {
   color: white;
 }
 
-/* Scrollbar */
+/* Scrollbar - sleeker */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -91,10 +117,16 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 2px solid var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
