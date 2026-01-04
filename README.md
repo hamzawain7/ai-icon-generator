@@ -1,3 +1,5 @@
+# DEMO: https://web-production-61afd.up.railway.app/
+
 # Icon Forge - AI Icon Set Generator
 
 A web application that generates consistent icon sets using AI. Built with a modular React + TypeScript frontend and Node.js + Express backend, powered by the Flux Schnell model via Replicate API.
