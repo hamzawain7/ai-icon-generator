@@ -1,5 +1,7 @@
 # DEMO: https://web-production-61afd.up.railway.app/
 
+DISCLAIMER: The results aren’t as good as I’d like, likely because I’m using a cheaper Flux AI model. I built this primarily for a job interview.
+
 # Icon Forge - AI Icon Set Generator
 
 A web application that generates consistent icon sets using AI. Built with a modular React + TypeScript frontend and Node.js + Express backend, powered by the Flux Schnell model via Replicate API.
