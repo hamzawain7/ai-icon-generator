@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: icon-generator
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: REPLICATE_API_TOKEN
+        sync: false
+

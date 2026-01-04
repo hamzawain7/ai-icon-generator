@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "AI-powered icon set generator using Replicate API",
   "main": "dist/server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:client && npm run build:server",
+    "build:server": "tsc",
+    "build:client": "cd client && npm install && npm run build",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "test": "jest"
